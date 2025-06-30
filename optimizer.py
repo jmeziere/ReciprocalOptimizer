@@ -41,6 +41,7 @@ class ReciprocalOptimizer:
     one (i.e. inside or outside of the object). Computationally, this is done
     with a mask. The second phase of the optimization problem is shrinkwrap,
     which updates the mask after the gradient optimization.
+    These stages should be iterated until convergence is reached.
     """
 
     def __init__(self, mod, shrink_thresh, shrink_sigma, use_gpu=True):
